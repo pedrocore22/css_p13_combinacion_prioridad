@@ -1,0 +1,21 @@
+/* Combinación de selectores en CSS */
+
+/* Combinación de varios selectores
+para las mismas reglas (,) */
+
+h1,
+h2 {
+    color: violet;
+}
+
+/* Combinación de varios selectores unidos (no lleva símbolo) */
+
+.brand.destacado {
+    color: crimson;
+}
+
+/* Combinación de selectores descendientes (espacio en blanco)  */
+
+.star-wars li { /*Afectará a elementos li que sean descencientes de star-wars */
+    color: orangered;
+}

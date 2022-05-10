@@ -1,0 +1,37 @@
+/* Prioridad en CSS
+
+Respecto a dónde está el código CSS
+1.- Las reglas en el atributo style
+2.- Las reglas en el elemento style
+3.- Las reglas en archivo externo CSS */
+
+/* p {
+    color: grey;
+} */
+
+/* El criterio que sigue el navegador para implementar
+las reglas es usar el índice de especificidad
+
+1er dígito => Nº de selectores por id #
+2o dígito => Nº de selectores por clase . o pseudoclase : 
+3er dígito => Nº de elementos o pseudoelementos :: */
+
+.texto { /* 010 */
+    color: orange;
+}
+
+p { /* 001 */
+    color: grey;
+}
+
+/* Romper la especifidad con el operador !important */
+/* Mala práctica */
+
+li.destacado {
+    color: violet;
+}
+
+li {
+    color: grey !important; /* Sobrescribe todos los estilos */
+}
+
